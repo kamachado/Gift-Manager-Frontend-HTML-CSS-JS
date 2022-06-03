@@ -1,0 +1,269 @@
+.header_web{
+    height: 100px;
+    background:#004AAD;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.logo{
+    height: 6em; 
+    width: 6em;
+}
+
+.title_header{
+    position: absolute;
+    left:8em;
+    font-size:3em;
+    color:aliceblue;
+    font-family: 'Montserrat Alternates', sans-serif;
+    text-shadow: 2px 2px 0  #000000 ;
+}
+
+.welcome_img{
+    position:absolute;
+    left:10em;
+    top:12em;
+    width: 15em;
+    height:15em;
+}
+
+.title_welcome{
+    position:absolute;
+    left:3em;
+    top:5em;
+    font-size: 2em;
+    font-family: 'Montserrat Alternates', sans-serif;
+    color:#004AAD;
+    text-shadow: 1px 1px 0 #000308 ;
+
+}
+
+.title_welcome_2{
+    position:absolute;
+    left:20em;
+    top:10em;
+    width: 15em;
+    font-size:1.5em;
+    font-family: 'Rubik', sans-serif;
+    color:#004AAD;
+    text-shadow: 1px 1px 0 #000308 ;
+
+}
+
+
+.home_buttons{
+    display: flexbox;
+    left:50%;
+    list-style: none;
+    position:absolute;
+    top:30em;
+    left:5em;
+    display:inline-flex;
+    flex-wrap: wrap;
+    width: 500px;
+    margin: 0;
+}
+
+.home_button_name{
+    display: inline-block;
+    padding: 5px;
+    top:50%;
+    left:55%;
+}
+
+.home_button{
+    width: 200px;
+    height: 50px;
+    border: 0;
+    cursor: pointer;
+    background:#052a9b;
+    border-radius: 20px;
+    color:#FFFFFF;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+}
+
+.home_button:hover{
+    background:#7e9cf8;
+    box-shadow:2px 2px 30px #11c8e9;
+    text-shadow:2px 2px 2px #004AAD;
+
+}
+
+.modal_container{
+    width:100vw;
+    height: 100vw;
+    background-color:rgba(0,0,0,.5);
+    position: fixed;
+    top:0px;
+    left:0px;
+    z-index: 2000;
+    display: none;
+    justify-content: center;
+
+
+
+
+}
+
+@keyframes modal {
+    from{
+       opacity:0;
+       transform: translate3d(0,-60px,0)
+    }
+    to{
+        opacity:1;
+        transform: translate3d(0,0,0);
+    }
+    
+}
+
+.acting .modal{
+    animation:modal .3s;
+
+
+}
+
+.modal_container.acting{
+    display: flex;
+}
+table{
+    color:aliceblue;
+}
+.modal{
+    
+    min-width: 200px;
+    background: #3b69f1;
+    width: 55%;
+    height: 35%;
+    padding: 30px;
+    border: 5px #000000 ;
+    border-style: double;
+    border-radius: 30px;
+    box-shadow:2px 2px 2px  #000000;
+    margin-top:10%;
+    position: relative;
+    top:0%;
+    bottom: 20%;
+    max-height: 500px;
+    overflow: auto;
+    
+}
+
+.close_button{
+    position:absolute;
+    top:0px;
+    right:8px;
+    border-radius: 15px;
+    background:#75a2f5;
+    cursor: pointer;
+
+}
+
+.table_get{
+    padding: 1px;
+    background: #181717;
+    text-align: center;
+    width: 300px;
+    position: absolute;
+    width: 700px;
+    left:12%;
+}
+
+.title{
+    text-align: center;
+    color:rgb(255, 255, 255);
+    text-shadow:2px 2px 5px #000000;
+    font-family: 'Rubik', sans-serif; 
+}
+
+
+.table_header{
+    background: #75a2f5;
+    padding: 5px;
+    border: 2px solid #000000;
+    text-align: center;
+    font-family: 'Rubik', sans-serif; 
+
+}
+
+tbody{
+    background-color: aliceblue;
+}
+
+
+th{
+    padding:10px;
+     width: 30px;
+}
+
+td{
+    color:#000000;
+    padding:5px ;
+    font-family: 'Rubik', sans-serif; 
+}
+
+
+.form_api{
+    padding-left: 30px;
+    padding-right: 30px;
+    background: #98c0f5;
+    text-align: center;
+    width: 300px;
+    position: relative;
+    width: 300px;
+    left:28%;
+    border:2px solid #000000;
+    border-radius: 20px;
+
+}
+
+label{
+    padding:10px ;
+    font-family: 'Rubik', sans-serif;
+    size:20px;
+    color:#01030c;
+    display: inline-flex;
+    position:relative;
+    bottom: 2px;
+    padding-bottom: 2px;
+
+}
+
+input{
+    padding:2px ;
+    display:inline-block;
+    left:20px;
+    margin-left: 10px;
+    width: 250px;
+    border-radius: 5px ;
+
+}
+
+.button_send{
+    padding: 2px;
+    margin:10px;
+    color:#ffffff;
+    background: #3b69f1;
+    font-family: 'Rubik', sans-serif;
+    border-color: rgb(38, 122, 231);
+    border-radius: 5px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.button_send:hover{
+    color:#000000;
+    background:#f1f2f3;
+    box-shadow:2px 2px 30px #11c8e9;
+
+}
+
+
+
+
+

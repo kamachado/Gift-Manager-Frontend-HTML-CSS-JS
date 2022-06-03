@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+
+<html lang:"pt-br">
+<head>
+    <meta charset="utf-8">
+    <title>Gifts manager</title>
+    <link rel="stylesheet" href="./css/reset/reset.css">
+    <link rel="stylesheet" href="./css/reset/normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/menu.css">
+
+    <script></script>
+    
+</head>
+
+<body>
+    <header class="header_web">
+        <img src="./img/logo.jpg" class="logo"/>
+        <h1 class="title_header">Gifts manager</h1>
+    </header>
+    <section class="welcome">
+        <img class="welcome_img" src="./img/img-index/personPresent.jpg"></img>
+        <h2 class="title_welcome">Bem-vindo Ao Gifts manager</h2>
+        <h3 class="title_welcome_2">Os melhores presentes não são os mais caros, nem aqueles que combinam com a nossa preferência, mas aqueles que são dados com todo carinho e coração!!</h3>
+    </section>
+    <section>
+        <ul  class="home_buttons">
+            <li class="home_button_name"><button class="home_button" id="button_insert_person">Novo cadastro de pessoa</button></li>
+            <li class="home_button_name"><button class="home_button" id="button_insert_department">Novo cadastro de setor</button></li>
+            <li class="home_button_name"><button class="home_button" id="button_get_person" onclick="searchPerson()">Exibir pessoas cadastradas</button></li>
+            <li class="home_button_name"><button class="home_button" id="button_get_department" onclick="searchDepartment()">Exibir setores</button></li>
+        </ul>
+    </section>
+
+    <div id="modal_person" class="modal_container">
+        <div class="modal">
+            <button class="close_button" id="close_button_get_person">X</button>
+            <h1 class="title">Lista de pessoas cadastradas</h1>
+            <table class="table_get">
+                <thead class="table_header">
+                    <tr>
+                        <th>Id</th>
+                        <th>Nome</th>
+                        <th>CPF</th>
+                        <th>Data de nascimento</th>
+                        <th>Pai Id</th>
+                        <th>Mãe Id</th>
+                        <th>É funcionário (1-sim/ 0-não)</th>
+                        <th>Remover cadastro</th>
+                    </tr>
+                </thead>
+                <tbody id="table_person_body" >
+                    <tr>
+                        <td ></td>
+                    </tr>
+                </tbody>
+
+            </table>
+        </div>
+    </div>
+
+    <div id="modal_insert_person" class="modal_container">
+        <div class="modal">
+            <button class="close_button" id="close_button_insert_person">X</button>
+            <h2 class="title" >Formulário de cadastro de pessoas</h2>
+            <form  id="form_insert_person" Class="form_api">
+                <label for ="Name">Nome</label>
+                <input type = "text" id="Name" class ="inputPadrao" >
+
+                <label for ="CPF">CPF</label>
+                <input type = "text" id="CPF" class ="inputPadrao" >
+
+                <label for="Birth_Date">Data de nascimento</label>
+                <input type ="date" id="Birth_Date" class ="inputPadrao" placeholder = "DD/MM/AAAA" >
+
+                <label for="Dad_Id">Id do pai</label> 
+                <input type ="text" id="Dad_Id" class ="inputPadrao" >
+
+                <label for="Mom_Id">Id da mãe</label> 
+                <input type ="text" id="Mom_Id" class ="inputPadrao" >
+
+                <label for="is_employee">É funcionário? [1-sim / 0-não]</label> 
+                <input type ="text" id="is_employee" class ="inputPadrao" >
+
+                <button class="button_send" type="submit" id="button_send_person">Cadastrar</button>
+
+            </form>
+        </div>
+    </div>
+
+    <div id="modal_department" class="modal_container">
+        <div class="modal">
+            <button class="close_button" id="close_button_get_department">X</button>
+            <h1 class="title">Lista de pessoas cadastradas</h1>
+            <table class="table_get">
+                <thead class="table_header">
+                    <tr>
+                        <th>Id</th>
+                        <th>Nome</th>
+                        <th>Responsável Id</th>
+                        <th>Remover cadastro</th>
+                    </tr>
+                </thead>
+                <tbody id="table_department_body" >
+                    <tr>
+                        <td ></td>
+                    </tr>
+                </tbody>
+
+            </table>
+        </div>
+    </div>
+
+    <div id="modal_insert_department" class="modal_container">
+        <div class="modal">
+            <button class="close_button" id="close_button_insert_department">X</button>
+            <h2 class="title" >Formulário de cadastro de pessoas</h2>
+            <form  id="form_insert_department" Class="form_api">
+                <label for ="Name">Nome do setor</label>
+                <input type = "text" id="Name_department" class ="inputPadrao" >
+
+                <label for="Person_Responsible_Id">Id Responsavel</label>
+                <input type = "text" id="Person_Responsible_Id" class ="inputPadrao" >
+
+                <button class="button_send" type="submit" id="button_send_person">Cadastrar</button>
+            </form>
+        </div>
+    </div>
+    <script src="main.js"></script>  
+
+</body>
+</html>
